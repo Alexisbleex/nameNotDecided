@@ -1,0 +1,46 @@
+:root { --navy:#0b1226; --panel:#141d3a; --line:#26335f; --parch:#f1e4c3; --crim:#b3203a; --muted:#9aa5c7; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--navy); color:var(--parch); font-family:Georgia,'Times New Roman',serif; line-height:1.5; }
+a { color:#e9c46a; }
+h1,h2,h3 { font-weight:normal; letter-spacing:.03em; }
+.wrap { max-width:1000px; margin:0 auto; padding:1rem; }
+.nav { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; padding:.6rem 1rem; background:var(--panel); border-bottom:2px solid var(--crim); }
+.nav nav { display:flex; flex-wrap:wrap; gap:.75rem; }
+.brand { color:#e9c46a; } .grow { flex:1; } .who { color:var(--muted); }
+.dot { background:var(--crim); color:#fff; border-radius:999px; padding:0 .45rem; font-size:.75rem; margin-left:.25rem; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:1rem; margin:.75rem 0; display:block; width:100%; }
+.card.row, .row { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.5rem; }
+.card.read { opacity:.6; }
+.slot { display:flex; justify-content:space-between; align-items:center; gap:.5rem; flex-wrap:wrap; }
+.big { font-size:1.3rem; } .muted { color:var(--muted); } .err { color:#ff8a9b; display:block; }
+label { display:block; margin:.6rem 0; } label.inline { display:inline-block; margin-right:1rem; }
+input, select, textarea { display:block; width:100%; padding:.5rem; margin-top:.25rem; background:var(--navy); color:var(--parch); border:1px solid var(--line); border-radius:4px; font:inherit; }
+input[type=checkbox] { display:inline; width:auto; }
+.row input, .row select { display:inline-block; width:auto; }
+fieldset { border:1px solid var(--line); border-radius:6px; margin:.6rem 0; }
+button { background:transparent; color:var(--parch); border:1px solid var(--parch); border-radius:4px; padding:.4rem .8rem; font:inherit; cursor:pointer; margin:0 .15rem; }
+button.primary { background:var(--crim); border-color:var(--crim); color:#fff; }
+button:disabled { opacity:.4; cursor:not-allowed; }
+:focus-visible { outline:3px solid #e9c46a; outline-offset:2px; }
+.auth { max-width:420px; margin:3rem auto; padding:1rem; }
+.badge { font-size:.75rem; padding:.1rem .5rem; border-radius:999px; border:1px solid var(--muted); }
+.b-PENDING,.b-PROPOSED,.b-DRAFT { color:#e9c46a; border-color:#e9c46a; }
+.b-MATCHED,.b-INTERVIEWER_CONFIRMED { color:#8ecae6; border-color:#8ecae6; }
+.b-CONFIRMED,.b-APPROVED,.b-COMPLETED { color:#95d5b2; border-color:#95d5b2; }
+.b-FLAGGED,.b-CANCELLED,.b-UNMATCHED { color:#ff8a9b; border-color:#ff8a9b; }
+table { width:100%; border-collapse:collapse; } th,td { text-align:left; padding:.4rem; border-bottom:1px solid var(--line); }
+.toast { position:fixed; right:1rem; bottom:1rem; background:var(--crim); color:#fff; padding:.75rem 1rem; border-radius:6px; z-index:50; max-width:90vw; }
+.toast button { color:#fff; border:none; }
+.overlay { position:fixed; inset:0; background:rgba(0,0,0,.6); display:grid; place-items:center; z-index:40; }
+.dialog { background:var(--panel); border:1px solid var(--parch); border-radius:8px; padding:1.25rem; width:min(420px,92vw); }
+.actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:.75rem; }
+.loader { width:28px; height:28px; border:3px solid var(--line); border-top-color:var(--crim); border-radius:50%; animation:spin 1s linear infinite; margin:1rem auto; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.grid-wrap { overflow-x:auto; }
+.grid { display:grid; gap:2px; min-width:560px; align-items:center; margin:.75rem 0; }
+.cell { height:22px; padding:0; margin:0; background:var(--panel); border:1px solid var(--line); }
+.cell.on { background:var(--crim); border-color:var(--crim); }
+.grid { user-select:none; }
+.fc { background:var(--panel); padding:.5rem; border-radius:8px; --fc-border-color:var(--line); --fc-page-bg-color:var(--panel); --fc-neutral-bg-color:var(--navy); --fc-list-event-hover-bg-color:var(--navy); }
+.fc a { color:inherit; text-decoration:none; }
+@media (max-width:600px) { .nav { gap:.4rem; } }
