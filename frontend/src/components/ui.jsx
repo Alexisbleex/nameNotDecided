@@ -36,7 +36,7 @@ export function Navbar() {
   const role = user.role.toLowerCase();
   return (
     <header className="nav">
-      <strong className="brand">⚜ The Ancient One's Trials</strong>
+      <strong className="brand">⚜ Aetherion </strong>
       <nav aria-label="Main">
         {NAV[user.role].map(([k, label]) => <a key={k} href={`#/${role}/${k}`}>{label}</a>)}
       </nav>
